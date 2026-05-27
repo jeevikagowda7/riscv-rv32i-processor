@@ -1,0 +1,11 @@
+Time resolution is 1 ps
+ERROR: Could not open VCD file sim/tb_pc.vcd for writing.
+T1 RESET    | pc_out = 00000000 (expect 00000000)
+T2 SEQ +4   | pc_out = 00000004 (expect 00000004)
+T3 SEQ +4   | pc_out = 00000008 (expect 00000008)
+T4 BRANCH   | pc_out = 00400080 (expect 00400080)
+T5 STALL    | pc_out = 00400080 (expect 00400080)
+T6 UNSTALL  | pc_out = ffffffff (expect ffffffff)
+-----------------------------
+PC testbench complete.
+$finish called at time : 56 ns : File "D:/riscv_rv32i/tb/tb_pc.v" Line 68
