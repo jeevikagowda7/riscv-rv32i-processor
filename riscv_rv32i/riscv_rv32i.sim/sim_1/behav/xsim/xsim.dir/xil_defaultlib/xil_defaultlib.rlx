@@ -1,7 +1,0 @@
-0.7
-2020.2
-May 22 2025
-00:13:55
-D:/riscv_rv32i/riscv_rv32i/riscv_rv32i.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,,,,,,,
-D:/riscv_rv32i/rtl/fetch/pc.v,1779892978,verilog,,D:/riscv_rv32i/tb/tb_pc.v,,pc,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
-D:/riscv_rv32i/tb/tb_pc.v,1779892972,verilog,,,,tb_pc,,,../../../../../../2025.1/Vivado/data/rsb/busdef,,,,,
