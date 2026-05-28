@@ -1,26 +1,22 @@
 // ============================================================
 // Module : instr_mem (Instruction Memory)
 // Project : RV32I Pipelined Processor
-// Description : Synchronous read, word-aligned instruction
-//               memory. Pre-loaded with program via $readmemh.
-//               256 words = 1KB of instruction memory.
+// Description : Asynchronous read for single-cycle CPU.
+//               Pre-loaded with program via $readmemh.
 // ============================================================
 
 module instr_mem (
     input  wire        clk,
-    input  wire [31:0] addr,       // From PC — byte address
-    output reg  [31:0] instr       // 32-bit instruction out
+    input  wire [31:0] addr,
+    output wire [31:0] instr
 );
 
-    reg [31:0] mem [0:255];        // 256 x 32-bit = 1KB memory
+    reg [31:0] mem [0:255];
 
-    // Load program from hex file at simulation start
     initial begin
         $readmemh("program.hex", mem);
     end
 
-    always @(posedge clk) begin
-        instr <= mem[addr[9:2]];   // Word-aligned: byte addr >> 2
-    end
+    assign instr = mem[addr[9:2]];
 
 endmodule
